@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>XunitFixtureSink</RootNamespace>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Using Include="Xunit.Sdk" />
+    <Using Include="Xunit.v3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../UnitTest1.cs" />
+    <Content Include="../xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="xunit.v3" Version="0.2.0-pre.69" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.0-pre.24" />
+  </ItemGroup>
+
+</Project>
